@@ -17,6 +17,7 @@ The following concepts will be explored in this project:
 - C++
 - Monte Carlo Localization
 - ROS AMCL package
+- ROS Navigation package
 
 ## Getting Started
 ----
@@ -34,6 +35,8 @@ The following items are required in order to visualize and create the project:
 
 - Linux: gcc / g++ is installed by default on most Linux distros
 
+- ROS Navigation package
+
 - [Linux Ubuntu 16.04.6 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/)
 - [Gazebo](http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install) 
 - [Robot Operating System](http://wiki.ros.org/kinetic/Installation/Ubuntu) (ROS)
@@ -49,28 +52,26 @@ Once these components are installed, you need to create a Catkin Workspace:
 
 Download/clone the repository and copy the "my_robot","ball_chaser" directory in the src directory:
 
-- `$ git clone https://github.com/lucastakara/Where_Am_I`
+- `$https://github.com/lucastakara/Home_Service_Robot.git`
 
-
-`Then, navigate up to the top-level catkin workspace directory and build the executables:
+Then, navigate up to the top-level catkin workspace directory and build the executables:
 
 - `cd ..`
 - `catkin_make` 
+- `rosdep -i install gmapping -y`
+- `rosdep -i install turtlebot_teleop -y`
+- `rosdep -i install turtlebot_rviz_launchers -y`
+- `rosdep -i install turtlebot_gazebo -y`
 
 Next, you can open Gazebo with the robot in it:
 
 - `$ source devel/setup.bash`
-
-- `$ roslaunch my_robot world.launch`
-
-
-
-This will initialize all the nodes. In Rviz, you should see a red robot on a black and white map, surrounded by red arrows representing the particles associated with the AMCL filter.
-
-To operate the robot via the keyboard, open a second terminal, navigate to the root level directory and execute:
+- `$ cd scripts`
+- `$ chmod +x home_service.sh`
+- `$ ./home_service.sh`
 
 
-- `$ source devel/setup.bash`
-- `$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
+
+
 
 
