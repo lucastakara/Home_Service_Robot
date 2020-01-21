@@ -50,7 +50,7 @@ Once these components are installed, you need to create a Catkin Workspace:
 
 - `$ catkin_init_workspace`
 
-Download/clone the repository and copy the "my_robot","ball_chaser" directory in the src directory:
+Download/clone the repository:
 
 - `$https://github.com/lucastakara/Home_Service_Robot.git`
 
