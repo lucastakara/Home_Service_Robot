@@ -5,7 +5,7 @@
 
 The goal of this project is creating a full home service robot capable of navigating to pick up and deliver virtual objects.
  
-![Gazebo](https://github.com/lucastakara/Where_Am_I/blob/master/images/Goal.png?raw=true)
+![Gazebo](https://github.com/lucastakara/Home_Service_Robot/blob/master/images/home_service.png?raw=true)
 ## Concepts
 ---
 The following concepts will be explored in this project:
